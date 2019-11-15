@@ -12,10 +12,11 @@ html {
 body {
   width: 100%;
   min-height: 150vh;
-  background-color: burlywood;
+  /* background-color: burlywood; */
 }
 
 .wrapper {
   width: 90%;
+  height: 100%;
   margin: 0 auto;
 }

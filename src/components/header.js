@@ -12,15 +12,22 @@ class Header extends Component {
       mobileMenuOpen: !this.state.mobileMenuOpen,
     })
   }
+
   render() {
     return (
-      <header>
+      <header className={`headerHeight`}>
         <div className="wrapper">
-          <div onClick={this.handleMobileMenu} className="hamburgerContainer">
+          <div
+            onClick={this.handleMobileMenu}
+            className={
+              "hamburgerContainer" +
+              (this.state.mobileMenuOpen ? " active" : "")
+            }
+          >
             <div></div>
             <div></div>
             <div></div>
-            <span>Menu</span>
+            {/* <span>Menu</span> */}
           </div>
           <nav className={this.state.mobileMenuOpen ? "active" : ""}>
             <ul>
@@ -50,5 +57,13 @@ class Header extends Component {
     )
   }
 }
+
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {
+    document.querySelector("header").classList.add("active")
+  } else {
+    document.querySelector("header").classList.remove("active")
+  }
+})
 
 export default Header

@@ -1,12 +1,14 @@
 import React from "react"
 import { Link } from "gatsby"
 import Header from "../components/header"
+import HomePage from "../components/homePage"
 import "../components/layout.css"
 
 const IndexPage = () => (
-  <div className="wrapper">
+  <>
     <Header />
-  </div>
+    <HomePage />
+  </>
 )
 
 export default IndexPage

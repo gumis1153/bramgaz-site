@@ -1,0 +1,85 @@
+section.homePage {
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/mainPage_bgc.jpg");
+    background-size: auto 100%;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+
+.bgcBlurr {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(65, 65, 65, .7);
+}
+
+.homePageContent {
+    position: relative;
+    display: grid;
+    grid-template-rows: 50px 80px 80px 80px 50px 1fr;
+    grid-template-columns: 1fr;
+    width: 100%;
+    height: 80%;
+    /* background-color: aqua; */
+}
+
+.homePageContent .blueRectangle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-52%, -52%);
+    transform: translate(-52%, -52%);
+    width: 95%;
+    height: 95%;
+    border: 2px solid #00366F;
+}
+
+.homePageContent .yellowRectangle {
+    position: absolute;
+    bottom: 50%;
+    right: 50%;
+    -webkit-transform: translate(52%, 51%);
+    transform: translate(52%, 51%);
+    width: 95%;
+    height: 95%;
+    border: 2px solid #FAA922;
+}
+
+.homePageContent div {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.homePageContent div h1 {
+    font-family: 'Oswald', sans-serif;
+    font-size: 54px;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: #ffffff;
+}
+
+.homePageContent div h1 span {
+    color: #00366F;
+}
+
+.homePageContent div:nth-of-type(5) h1 span {
+    color: #FAA922;
+}
+
+.homePageContent div p {
+    font-family: "Quicksand", sans-serif;
+    font-size: 18px;
+    color: #FAA922;
+}
+
+.homePageButton {
+    display: block;
+    margin: 0 auto;
+    padding: 15px 30px;
+    font-family: "Quicksand", sans-serif;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: transparent;
+    border: 2px solid #ffffff;
+}
