@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    title: `Bramgaz | Leszno - Bramy. Drzwi. Napędy. Okna`,
+    description: `Bramy, drzwi, napędy, okna. ul. Chociszewskiego 37a, 64-100 Leszno`,
+    author: `piotrjakubowski.pl`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
@@ -29,8 +29,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [
-          {
+        fonts: [{
             family: `Oswald`,
             subsets: [`latin-ext`],
             variants: [`400`, `500`],

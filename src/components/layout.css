@@ -12,6 +12,7 @@ html {
 body {
   width: 100%;
   min-height: 150vh;
+  overflow-x: hidden;
   /* background-color: burlywood; */
 }
 
