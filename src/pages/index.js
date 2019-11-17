@@ -3,6 +3,7 @@ import { Link } from "gatsby"
 import Header from "../components/header"
 import HomePage from "../components/homePage"
 import About from "../components/about"
+import Offer from "../components/offer"
 import "../components/layout.css"
 
 const IndexPage = () => (
@@ -10,6 +11,7 @@ const IndexPage = () => (
     <Header />
     <HomePage />
     <About />
+    <Offer />
   </>
 )
 
