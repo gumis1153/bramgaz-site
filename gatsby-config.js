@@ -29,7 +29,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
-        fonts: [{
+        fonts: [
+          {
             family: `Oswald`,
             subsets: [`latin-ext`],
             variants: [`400`, `500`],
@@ -40,6 +41,15 @@ module.exports = {
             variants: [`400`, `500`],
           },
         ],
+      },
+    },
+    {
+      resolve: "gatsby-source-graphql",
+      options: {
+        typeName: "BramgazPage",
+        fieldName: "bramgazApi",
+        url:
+          "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality
