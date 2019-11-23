@@ -108,7 +108,23 @@ section.offer .wrapper {
 
 .deliversSlider {
   grid-row: 3 / 4;
-  width: 100%;
+  width: 272px;
   height: 100%;
   background-color: #ffffff;
+  z-index: 0;
+}
+
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  color: #00366f;
+}
+
+.carousel {
+  width: 100%;
+  height: 100%;
 }

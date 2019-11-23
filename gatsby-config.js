@@ -26,6 +26,7 @@ module.exports = {
         display: `minimal-ui`,
       },
     },
+
     {
       resolve: `gatsby-plugin-prefetch-google-fonts`,
       options: {
@@ -43,6 +44,7 @@ module.exports = {
         ],
       },
     },
+
     {
       resolve: "gatsby-source-graphql",
       options: {

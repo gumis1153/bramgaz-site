@@ -4,7 +4,7 @@ import photo from "../images/about_img.jpg"
 
 const About = () => {
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="wrapper">
         <div className="sectionTitle">
           <h1>O nas</h1>

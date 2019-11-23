@@ -32,13 +32,13 @@ class Header extends Component {
           <nav className={this.state.mobileMenuOpen ? "active" : ""}>
             <ul>
               <li>
-                <a href="">Start</a>
+                <a href="#homePage">Start</a>
               </li>
               <li>
-                <a href="">O nas</a>
+                <a href="#about">O nas</a>
               </li>
               <li>
-                <a href="">Oferta</a>
+                <a href="#offer">Oferta</a>
               </li>
               <li>
                 <a href="">Realizacje</a>

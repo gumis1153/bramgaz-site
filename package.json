@@ -13,6 +13,7 @@
     "fontawesome": "^5.6.3",
     "gatsby": "^2.17.11",
     "gatsby-image": "^2.2.31",
+    "gatsby-plugin-google-fonts": "^1.0.1",
     "gatsby-plugin-manifest": "^2.2.27",
     "gatsby-plugin-offline": "^3.0.19",
     "gatsby-plugin-prefetch-google-fonts": "^1.4.3",
@@ -25,7 +26,9 @@
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-helmet": "^5.2.1",
-    "react-icons": "^3.8.0"
+    "react-icons": "^3.8.0",
+    "react-id-swiper": "^2.4.0",
+    "react-lightbox-component": "^1.2.1"
   },
   "devDependencies": {
     "prettier": "^1.19.1"

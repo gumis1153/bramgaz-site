@@ -3,7 +3,7 @@ import "../styles/homePage.css"
 
 const homePage = () => {
   return (
-    <section className="homePage">
+    <section className="homePage" id="homePage">
       <div className="bgcBlurr">
         <div className="wrapper">
           <div className="headerHeight"></div>
