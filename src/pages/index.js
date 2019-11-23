@@ -5,6 +5,9 @@ import HomePage from "../components/homePage"
 import About from "../components/about"
 import Offer from "../components/offer"
 import Gallery from "../components/gallery"
+import Certifications from "../components/certifications"
+import Contact from "../components/contact"
+import Footer from "../components/footer"
 import "../components/layout.css"
 
 const IndexPage = () => (
@@ -14,6 +17,9 @@ const IndexPage = () => (
     <About />
     <Offer />
     <Gallery />
+    <Certifications />
+    <Contact />
+    <Footer />
   </>
 )
 

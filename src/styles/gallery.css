@@ -1,0 +1,8 @@
+section.gallery {
+    min-height: 400px;
+}
+
+section.gallery .wrapper {
+    display: grid;
+    grid-template-rows: 80px 1fr;
+}

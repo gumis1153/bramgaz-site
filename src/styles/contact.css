@@ -1,0 +1,133 @@
+section.contact {
+  background-color: #ffffff;
+}
+
+section.contact .wrapper {
+  display: grid;
+  grid-template-rows: 80px 600px 1fr 200px 10px;
+}
+
+section.contact .wrapper form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+section.contact .wrapper form input,
+section.contact .wrapper form textarea {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 100%;
+  height: 60px;
+  font-family: Quicksand, sans-serif;
+  font-weight: 500;
+  color: #00366f;
+  border: none;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  padding-left: 10px;
+  margin-top: 20px;
+}
+
+section.contact .wrapper form input::-webkit-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form input:-ms-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form input::-ms-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form input::placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form textarea {
+  resize: none;
+  height: 200px;
+  padding-top: 10px;
+}
+
+section.contact .wrapper form textarea::-webkit-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form textarea:-ms-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form textarea::-ms-input-placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form textarea::placeholder {
+  color: #00366f;
+}
+
+section.contact .wrapper form input.submit {
+  width: 160px;
+  background-color: #00366f;
+  color: #ffffff;
+  font-family: Oswald, sans-serif;
+  font-size: 18px;
+  padding-left: 0;
+}
+
+.contactInfo {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.contactInfoSection {
+  margin: 10px 0;
+  position: relative;
+}
+
+.contactInfoSection p {
+  font-family: Quicksand, sans-serif;
+  font-size: 14px;
+  color: #00366f;
+  font-weight: 500;
+}
+
+.contactInfoSectionTitle {
+  width: 100%;
+  height: 50px;
+  margin-bottom: 20px;
+}
+
+.contactInfoSectionTitle::after {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #00366f;
+}
+
+.contactInfoSectionTitle h3 {
+  position: relative;
+  font-family: Oswald, sans-serif;
+  font-size: 26px;
+  text-transform: uppercase;
+  color: #00366f;
+}
+
+.map {
+  width: 100%;
+  height: 100%;
+}
