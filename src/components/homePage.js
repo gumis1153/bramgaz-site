@@ -3,7 +3,7 @@ import "../styles/homePage.css"
 
 const homePage = () => {
   return (
-    <section className="homePage" id="homePage">
+    <section className="homePage" id="start">
       <div className="bgcBlurr">
         <div className="wrapper">
           <div className="headerHeight"></div>
@@ -31,6 +31,9 @@ const homePage = () => {
             </div>
             <div>
               <button className="homePageButton">Czytaj więcej</button>
+            </div>
+            <div className="homeSlider">
+              <div className="homeSliderContainer"></div>
             </div>
           </div>
         </div>

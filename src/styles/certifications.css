@@ -5,7 +5,7 @@ section.certifications {
 
 section.certifications .wrapper {
     display: grid;
-    grid-template-rows: 80px 1fr 200px 30px;
+    grid-template-rows: 80px 1fr 200px 40px;
 }
 
 section.certifications .wrapper .sectionTitle h1 {
@@ -32,4 +32,32 @@ section.certifications .wrapper p {
     width: 100%;
     height: 200px;
     background-color: #ffffff;
+}
+
+@media (min-width:1024px) {
+    section.certifications .wrapper {
+        width: 800px;
+        grid-gap: 10px;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    section.certifications .wrapper p {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .certificationsSlider {
+        grid-column: 1 / 3;
+        grid-row: 3 / 4;
+    }
+}
+
+@media (min-width:1400px) {
+    section.certifications .wrapper {
+        width: 1200px;
+    }
+
+    section.certifications .wrapper p {
+        line-height: 24px;
+    }
 }

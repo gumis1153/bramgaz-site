@@ -40,6 +40,7 @@ section.offer .wrapper {
   margin: 20px 0;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  cursor: pointer;
 }
 
 .clientBtn.active {
@@ -108,7 +109,7 @@ section.offer .wrapper {
 
 .deliversSlider {
   grid-row: 3 / 4;
-  width: 272px;
+  width: 100%;
   height: 100%;
   background-color: #ffffff;
   z-index: 0;
@@ -127,4 +128,47 @@ section.offer .wrapper {
 .carousel {
   width: 100%;
   height: 100%;
+}
+
+@media (min-width:1024px) {
+  section.offer .wrapper {
+    width: 800px;
+  }
+
+  .offerMain {
+    grid-gap: 10px;
+  }
+
+  .availableOffer {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+  }
+
+  .offerContainer {
+    width: 150px;
+    height: 150px;
+    margin: 0;
+  }
+
+  .clientBtn:hover {
+    color: #00366f;
+  }
+}
+
+@media (min-width:1400px) {
+  section.offer .wrapper {
+    padding-top: 20px;
+    width: 1200px;
+  }
+
+  .offerContainer {
+    width: 230px;
+    height: 230px;
+  }
+
+  .clientBtn {
+    font-size: 24px;
+  }
 }

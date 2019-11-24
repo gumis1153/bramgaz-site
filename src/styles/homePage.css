@@ -17,7 +17,8 @@ section.homePage {
 .homePageContent {
     position: relative;
     display: grid;
-    grid-template-rows: 50px 80px 80px 80px 50px 1fr;
+    /* grid-template-rows: 50px 80px 80px 80px 60px 1fr; */
+    grid-template-rows: 50px 18% 18% 18% 55px 1fr;
     grid-template-columns: 1fr;
     width: 100%;
     height: 80%;
@@ -82,4 +83,183 @@ section.homePage {
     color: #ffffff;
     background-color: transparent;
     border: 2px solid #ffffff;
+    cursor: pointer;
+    z-index: 2;
+}
+
+.homePageContent div.homeSlider {
+    grid-column: 2 / 3;
+    grid-row: 1 / 7;
+    padding-left: 0;
+}
+
+.homePageContent div .homeSliderContainer {
+    width: 80%;
+    height: 425px;
+    background-color: #ffffff;
+    padding-left: 0;
+}
+
+@media (min-width: 375px) and (min-height: 800px) {
+    .homePageContent {
+        grid-template-rows: 50px 20% 20% 20% 70px 1fr;
+    }
+
+    .homePageContent div h1 {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 411px) {
+    .homePageContent div h1 {
+        font-size: 70px;
+    }
+}
+
+@media (min-width: 568px) {
+    .homePageContent {
+        width: 50%;
+        height: 70%;
+        grid-template-rows: 8% 20% 20% 20% 25px 1fr;
+        margin: 0 auto;
+    }
+
+    .homePageContent div {
+        width: 50%;
+    }
+
+    .homePageContent div h1 {
+        font-size: 28px;
+    }
+
+    .homePageContent div p {
+        font-size: 12px;
+    }
+
+    .homePageButton {
+        padding: 10px 25px;
+        font-size: 10px;
+    }
+}
+
+@media (min-width:768px) and (min-height:1024px) {
+    .homePageContent {
+        grid-template-rows: 8% 20% 20% 20% 10% 1fr;
+        margin: 40px auto;
+    }
+
+    .homePageContent div h1 {
+        font-size: 60px;
+    }
+
+    .homePageContent div p {
+        font-size: 16px;
+    }
+}
+
+@media (min-width:1024px) {
+    .homePageContent {
+        grid-template-columns: 30% 70%;
+        grid-template-rows: 15% 15% 15% 15% 70px 1fr;
+        width: 800px;
+        height: 570px;
+        margin: 40px auto;
+    }
+
+    .homePageContent div {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        width: 100%;
+        padding-left: 40px;
+    }
+
+    .homePageContent div h1 {
+        font-size: 64px;
+    }
+
+    .homePageContent div:nth-of-type(4) {
+        grid-column: 1 / 2;
+        grid-row: 2 / 3;
+    }
+
+    .homePageContent div:nth-of-type(5) {
+        grid-column: 1 / 2;
+        grid-row: 3 / 4;
+    }
+
+    .homePageContent div:nth-of-type(6) {
+        grid-column: 1 / 2;
+        grid-row: 4 / 5;
+    }
+
+    .homePageContent div:nth-of-type(7) {
+        grid-column: 1 / 2;
+        grid-row: 5 / 6;
+    }
+
+    .homePageContent div:nth-of-type(7) p {
+        font-size: 18px;
+    }
+
+    .homePageContent div:nth-of-type(8) {
+        grid-column: 1 / 2;
+        grid-row: 6 / 7;
+        padding-left: 0;
+        align-self: flex-start;
+    }
+
+    .homePageContent .blueRectangle {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate(-51%, -51%);
+        transform: translate(-51%, -51%);
+    }
+
+    .homePageContent .yellowRectangle {
+        width: 100%;
+        height: 100%;
+        -webkit-transform: translate(50%, 51%);
+        transform: translate(50%, 51%);
+    }
+}
+
+@media (min-width:1024px) and (orientation:portrait) {
+    section.homePage .wrapper {
+        display: grid;
+        grid-template-rows: 80px 300px 570px;
+    }
+
+    .homePageContent {
+        grid-row: 3 / 4;
+    }
+}
+
+@media (min-width:1400px) {
+    .homePageContent {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -webkit-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        width: 1200px;
+    }
+
+    .homePageContent div {
+        width: 60%;
+        padding-left: 0;
+    }
+
+    .homePageButton {
+        width: 100%;
+        height: 60px;
+        font-size: 16px;
+    }
+
+    .homePageContent div.homeSlider {
+        width: 100%;
+    }
 }

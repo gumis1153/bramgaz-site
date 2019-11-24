@@ -3,9 +3,9 @@ import "../styles/footer.css"
 
 const Footer = () => {
   return (
-    <section className="footer">
+    <footer>
       <p>2019 | Designed and developed by: piotrjakubowski.pl</p>
-    </section>
+    </footer>
   )
 }
 

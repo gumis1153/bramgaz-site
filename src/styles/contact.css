@@ -78,12 +78,14 @@ section.contact .wrapper form textarea::placeholder {
 }
 
 section.contact .wrapper form input.submit {
+  position: relative;
   width: 160px;
   background-color: #00366f;
   color: #ffffff;
   font-family: Oswald, sans-serif;
   font-size: 18px;
   padding-left: 0;
+  cursor: pointer;
 }
 
 .contactInfo {
@@ -130,4 +132,63 @@ section.contact .wrapper form input.submit {
 .map {
   width: 100%;
   height: 100%;
+}
+
+@media (min-width: 568px) {
+
+  section.contact .wrapper form input,
+  section.contact .wrapper form textarea {
+    width: 280px;
+  }
+}
+
+@media (min-width:1024px) {
+  section.contact .wrapper {
+    width: 800px;
+    grid-gap: 20px;
+    grid-template-rows: 80px 390px 1fr 200px 10px;
+  }
+
+  section.contact .wrapper form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 60px 200px 80px;
+    grid-gap: 10px;
+    margin-top: 20px;
+  }
+
+  section.contact .wrapper form input,
+  section.contact .wrapper form textarea {
+    margin-top: 0;
+    width: 100%;
+  }
+
+  section.contact .wrapper form textarea {
+    grid-column: 1 / 4;
+    grid-row: 2 / 3;
+  }
+
+  .contactInfo {
+    grid-gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr
+  }
+
+  section.contact .wrapper form input.submit {
+    -webkit-transition: .3s;
+    transition: .3s;
+  }
+
+  section.contact .wrapper form input.submit:hover {
+    background-color: #FAA922;
+    color: #00366f;
+  }
+
+
+}
+
+@media (min-width:1400px) {
+  section.contact .wrapper {
+    width: 1200px;
+  }
 }

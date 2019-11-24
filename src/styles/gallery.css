@@ -4,5 +4,18 @@ section.gallery {
 
 section.gallery .wrapper {
     display: grid;
-    grid-template-rows: 80px 1fr;
+    grid-template-rows: 80px 1fr 40px;
+}
+
+@media (min-width:1024px) {
+    section.gallery .wrapper {
+        width: 800px;
+    }
+}
+
+@media (min-width:1400px) {
+    section.gallery .wrapper {
+        padding-top: 20px;
+        width: 1200px;
+    }
 }

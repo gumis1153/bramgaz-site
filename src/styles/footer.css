@@ -1,9 +1,9 @@
-section.footer {
+footer {
     width: 100%;
     height: 30px;
 }
 
-section.footer p {
+footer p {
     font-family: Quicksand, sans-serif;
     font-size: 10px;
     font-weight: 500;

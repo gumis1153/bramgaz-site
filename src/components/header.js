@@ -14,6 +14,13 @@ class Header extends Component {
   }
 
   render() {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 100) {
+        document.querySelector("header").classList.add("active")
+      } else {
+        document.querySelector("header").classList.remove("active")
+      }
+    })
     return (
       <header className={`headerHeight`}>
         <div className="wrapper">
@@ -27,43 +34,58 @@ class Header extends Component {
             <div></div>
             <div></div>
             <div></div>
-            {/* <span>Menu</span> */}
           </div>
           <nav className={this.state.mobileMenuOpen ? "active" : ""}>
             <ul>
               <li>
-                <a href="#homePage">Start</a>
+                <a href="#start" onClick={this.handleMobileMenu}>
+                  Start
+                </a>
               </li>
               <li>
-                <a href="#about">O nas</a>
+                <a href="#about" onClick={this.handleMobileMenu}>
+                  O nas
+                </a>
               </li>
               <li>
-                <a href="#offer">Oferta</a>
+                <a href="#offer" onClick={this.handleMobileMenu}>
+                  Oferta
+                </a>
               </li>
               <li>
-                <a href="">Realizacje</a>
+                <a href="#gallery" onClick={this.handleMobileMenu}>
+                  Realizacje
+                </a>
               </li>
               <li>
-                <a href="">Certyfikaty</a>
+                <a href="#certifications" onClick={this.handleMobileMenu}>
+                  Certyfikaty
+                </a>
               </li>
               <li>
-                <a href="">Kontakt</a>
+                <a href="#contact" onClick={this.handleMobileMenu}>
+                  Kontakt
+                </a>
               </li>
             </ul>
           </nav>
-          <img src={BramgazLogo} alt="Logo firmy bramgaz" />
+          <nav className="desktop">
+            <button>Start</button>
+            <button>O nas</button>
+            <button>Oferta</button>
+            <button>Realizacje</button>
+            <button> Certyfikaty</button>
+            <button>Kontakt</button>
+          </nav>
+          <div className="logo">
+            <a href="#">
+              <img src={BramgazLogo} alt="Logo firmy bramgaz" />
+            </a>
+          </div>
         </div>
       </header>
     )
   }
 }
-
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
-    document.querySelector("header").classList.add("active")
-  } else {
-    document.querySelector("header").classList.remove("active")
-  }
-})
 
 export default Header
