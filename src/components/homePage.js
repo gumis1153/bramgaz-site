@@ -1,6 +1,15 @@
 import React from "react"
-import "../styles/homePage.css"
+import AwesomeSlider from "react-awesome-slider"
+import withAutoplay from "react-awesome-slider/dist/autoplay"
+import img1 from "../images/home1.jpg"
+import img2 from "../images/home2.jpg"
+import img3 from "../images/home3.jpg"
+import img4 from "../images/home4.jpg"
+import img5 from "../images/home5.jpg"
+import "react-awesome-slider/dist/styles.css"
 
+import "../styles/homePage.css"
+const AutoplaySlider = withAutoplay(AwesomeSlider)
 const homePage = () => {
   return (
     <section className="homePage" id="start">
@@ -30,10 +39,36 @@ const homePage = () => {
               <p>To nasza specjalność</p>
             </div>
             <div>
-              <button className="homePageButton">Czytaj więcej</button>
+              <button
+                className="homePageButton"
+                onClick={() => {
+                  document.querySelector("section.about").scrollIntoView({
+                    behavior: "smooth",
+                    block: "start",
+                    inline: "nearest",
+                  })
+                }}
+              >
+                Czytaj więcej
+              </button>
             </div>
             <div className="homeSlider">
-              <div className="homeSliderContainer"></div>
+              <div className="homeSliderContainer">
+                <AutoplaySlider
+                  play={true}
+                  cancelOnInteraction={false} // should stop playing on user interaction
+                  interval={4000}
+                  fillParent={true}
+                  bullets={false}
+                  className="aws-btn"
+                >
+                  <div data-src={img1} />
+                  <div data-src={img2} />
+                  <div data-src={img3} />
+                  <div data-src={img4} />
+                  <div data-src={img5} />
+                </AutoplaySlider>
+              </div>
             </div>
           </div>
         </div>

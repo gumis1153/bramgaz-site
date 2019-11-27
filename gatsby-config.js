@@ -48,7 +48,7 @@ module.exports = {
     {
       resolve: "gatsby-source-graphql",
       options: {
-        typeName: "BramgazPage",
+        typeName: "bramgazApi",
         fieldName: "bramgazApi",
         url:
           "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",

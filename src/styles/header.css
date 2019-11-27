@@ -198,7 +198,6 @@ header img {
     left: auto;
     bottom: auto;
     background-color: transparent;
-
   }
 
   nav.desktop button {
@@ -213,11 +212,11 @@ header img {
     cursor: pointer;
     -webkit-transition: .3s;
     transition: .3s;
+    outline: none;
   }
 
   nav.desktop button:hover {
-    text-decoration: underline;
-    /* border-bottom: 2px solid #00366f; */
+    background-color: #FAA922;
   }
 
 }

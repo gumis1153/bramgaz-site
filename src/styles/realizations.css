@@ -7,6 +7,12 @@ section.gallery .wrapper {
     grid-template-rows: 80px 1fr 40px;
 }
 
+section.gallery .wrapper div.gallery {
+    margin-top: 20px;
+    grid-row: 2 / 3;
+
+}
+
 @media (min-width:1024px) {
     section.gallery .wrapper {
         width: 800px;

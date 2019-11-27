@@ -77,14 +77,16 @@ section.contact .wrapper form textarea::placeholder {
   color: #00366f;
 }
 
-section.contact .wrapper form input.submit {
+section.contact .wrapper form button.submit {
   position: relative;
   width: 160px;
   background-color: #00366f;
   color: #ffffff;
+  border: none;
   font-family: Oswald, sans-serif;
   font-size: 18px;
   padding-left: 0;
+  padding: 15px 20px;
   cursor: pointer;
 }
 
@@ -174,12 +176,12 @@ section.contact .wrapper form input.submit {
     grid-template-rows: 1fr
   }
 
-  section.contact .wrapper form input.submit {
+  section.contact .wrapper form button.submit {
     -webkit-transition: .3s;
     transition: .3s;
   }
 
-  section.contact .wrapper form input.submit:hover {
+  section.contact .wrapper form button.submit:hover {
     background-color: #FAA922;
     color: #00366f;
   }

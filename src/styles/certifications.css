@@ -3,6 +3,10 @@ section.certifications {
     min-height: 300px;
 }
 
+section.certifications div.slick-slider {
+    height: 200px;
+}
+
 section.certifications .wrapper {
     display: grid;
     grid-template-rows: 80px 1fr 200px 40px;

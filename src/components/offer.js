@@ -1,8 +1,10 @@
 import React, { Component } from "react"
+import Slider from "react-slick"
+
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 import "../styles/offer.css"
 
-// import { StaticQuery, graphql } from "gatsby"
-// import SimpleSwiper from "./SimpleSwiper"
 import OfferIndividuals from "./offerIndividuals"
 import OfferIndustry from "./offerIndustry"
 
@@ -51,33 +53,34 @@ class Offer extends Component {
   }
 
   render() {
-    const params = {
-      autoplay: {
-        delay: 2000,
-      },
-      // setWrapperSize: true,
-      roundLengths: true,
-      loop: true,
-      navigation: {
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      },
-      breakpoints: {
-        320: {
-          slidesPerView: 2,
-          spaceBetween: 20,
+    const settings = {
+      autoplay: true,
+      dots: false,
+      infinite: true,
+      speed: 300,
+      slidesToShow: 5,
+      slidesToScroll: 1,
+      mobileFirst: true,
+      responsive: [
+        {
+          breakpoint: 1400,
+          settings: {
+            slidesToShow: 3,
+            infinite: true,
+          },
+        },
+        {
+          breakpoint: 1024,
+          settings: {
+            slidesToShow: 1,
+            slidesToScroll: 1,
+          },
         },
 
-        480: {
-          slidesPerView: 3,
-          spaceBetween: 30,
-        },
-
-        640: {
-          slidesPerView: 4,
-          spaceBetween: 40,
-        },
-      },
+        // You can unslick at a given breakpoint now by adding:
+        // settings: "unslick"
+        // instead of a settings object
+      ],
     }
     return (
       <section className="offer" id="offer">
@@ -113,7 +116,79 @@ class Offer extends Component {
                 <OfferIndustry />
               )}
             </div>
-            <div className="deliversSlider"> </div>
+            <div className="deliversSlider">
+              <Slider {...settings}>
+                <div>
+                  <img src={logo1} alt="" />
+                </div>
+                <div>
+                  <img src={logo2} alt="" />
+                </div>
+                <div>
+                  <img src={logo3} alt="" />
+                </div>
+                <div>
+                  <img src={logo4} alt="" />
+                </div>
+                <div>
+                  <img src={logo5} alt="" />
+                </div>
+                <div>
+                  <img src={logo6} alt="" />
+                </div>
+                <div>
+                  <img src={logo7} alt="" />
+                </div>
+                <div>
+                  <img src={logo8} alt="" />
+                </div>
+                <div>
+                  <img src={logo9} alt="" />
+                </div>
+                <div>
+                  <img src={logo10} alt="" />
+                </div>
+                <div>
+                  <img src={logo11} alt="" />
+                </div>
+                <div>
+                  <img src={logo12} alt="" />
+                </div>
+                <div>
+                  <img src={logo13} alt="" />
+                </div>
+                <div>
+                  <img src={logo14} alt="" />
+                </div>
+                <div>
+                  <img src={logo15} alt="" />
+                </div>
+                <div>
+                  <img src={logo16} alt="" />
+                </div>
+                <div>
+                  <img src={logo17} alt="" />
+                </div>
+                <div>
+                  <img src={logo18} alt="" />
+                </div>
+                <div>
+                  <img src={logo19} alt="" />
+                </div>
+                <div>
+                  <img src={logo20} alt="" />
+                </div>
+                <div>
+                  <img src={logo21} alt="" />
+                </div>
+                <div>
+                  <img src={logo22} alt="" />
+                </div>
+                <div>
+                  <img src={logo23} alt="" />
+                </div>
+              </Slider>
+            </div>
           </div>
         </div>
       </section>

@@ -25,6 +25,7 @@ const OfferIndividuals = () => {
               src={index.photo.url}
             ></img>
             <span>{index.photoTitle}</span>
+            {/* <span>{index.photo.url}</span> */}
           </div>
         ))
       }

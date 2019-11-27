@@ -27,18 +27,30 @@ class Contact extends Component {
           <div className="sectionTitle">
             <h1>Kontakt </h1>{" "}
           </div>
-          <form action="">
-            <input type="text" name="" id="" placeholder="Imię i nazwisko" />
-            <input type="text" name="" id="" placeholder="E-mail" />
-            <input type="text" name="" id="" placeholder="Nr telefonu" />
+          <form method="post" action="#">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Imię i nazwisko"
+            />
+            <input type="email" name="email" id="email" placeholder="E-mail" />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Nr telefonu"
+            />
             <textarea
-              name=""
-              id=""
+              name="message"
+              id="message"
               cols="30"
               rows="10"
               placeholder="Treść wiadomości"
             ></textarea>
-            <input className="submit" type="submit" value="Wyślij"></input>
+            <button className="submit" type="submit">
+              Wyślij
+            </button>
           </form>
           <div className="contactInfo">
             <div className="contactInfoSection">

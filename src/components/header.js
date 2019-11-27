@@ -16,8 +16,14 @@ class Header extends Component {
   render() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
+        document.querySelectorAll(".desktop button").forEach(element => {
+          element.style.color = "#00366F"
+        })
         document.querySelector("header").classList.add("active")
       } else {
+        document.querySelectorAll(".desktop button").forEach(element => {
+          element.style.color = "#FFFFFF"
+        })
         document.querySelector("header").classList.remove("active")
       }
     })
@@ -70,12 +76,73 @@ class Header extends Component {
             </ul>
           </nav>
           <nav className="desktop">
-            <button>Start</button>
-            <button>O nas</button>
-            <button>Oferta</button>
-            <button>Realizacje</button>
-            <button> Certyfikaty</button>
-            <button>Kontakt</button>
+            <button
+              onClick={() => {
+                document.getElementById("start").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              Start
+            </button>
+            <button
+              onClick={() => {
+                document.getElementById("about").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              O nas
+            </button>
+            <button
+              onClick={() => {
+                document.getElementById("offer").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              Oferta
+            </button>
+            <button
+              onClick={() => {
+                document.getElementById("gallery").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              Realizacje
+            </button>
+            <button
+              onClick={() => {
+                document.getElementById("certifications").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              {" "}
+              Certyfikaty
+            </button>
+            <button
+              onClick={() => {
+                document.getElementById("contact").scrollIntoView({
+                  behavior: "smooth",
+                  block: "start",
+                  inline: "nearest",
+                })
+              }}
+            >
+              Kontakt
+            </button>
           </nav>
           <div className="logo">
             <a href="#">
