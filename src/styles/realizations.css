@@ -8,9 +8,9 @@ section.gallery .wrapper {
 }
 
 section.gallery .wrapper div.gallery {
+    position: relative;
     margin-top: 20px;
     grid-row: 2 / 3;
-
 }
 
 @media (min-width:1024px) {

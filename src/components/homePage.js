@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { StaticQuery, graphql } from "gatsby"
+import Autoplay from "./autoplay"
 
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
@@ -18,6 +19,14 @@ class homePage extends Component {
   state = {}
 
   render() {
+    const options = {
+      play: true,
+      cancelOnInteraction: false,
+      interval: 4000,
+      fillParent: true,
+      bullets: false,
+      className: "aws-btn",
+    }
     return (
       <section className="homePage" id="start">
         <div className="bgcBlurr">
@@ -60,41 +69,14 @@ class homePage extends Component {
                 </button>
               </div>
               <div className="homeSlider">
-                {/* <StaticQuery
-                      query={graphql`
-                        {
-                          bramgazApi {
-                            homeSliders {
-                              photo {
-                                url
-                              }
-                            }
-                          }
-                        }
-                      `}
-                      render={({ bramgazApi: { homeSliders } }) =>
-                        homeSliders.map(index => (
-                          
-                        
-                          
-                          
-                          ))
-                      }
-                    /> */}
                 <div className="homeSliderContainer">
-                  <AutoplaySlider
-                    play={true}
-                    cancelOnInteraction={false} // should stop playing on user interaction
-                    interval={4000}
-                    fillParent={true}
-                    bullets={false}
-                    className="aws-btn"
-                  >
-                    <div data-src={img1} />
+                  <AutoplaySlider {...options}>
+                    <Autoplay />
+                    {/* <div data-src={img1} />
                     <div data-src={img2} />
                     <div data-src={img3} />
                     <div data-src={img4} />
-                    <div data-src={img5} />
+                    <div data-src={img5} /> */}
                   </AutoplaySlider>
                 </div>
               </div>
