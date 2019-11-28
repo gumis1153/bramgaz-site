@@ -71,12 +71,12 @@ class homePage extends Component {
               <div className="homeSlider">
                 <div className="homeSliderContainer">
                   <AutoplaySlider {...options}>
-                    <Autoplay />
-                    {/* <div data-src={img1} />
+                    {/* <Autoplay /> */}
+                    <div data-src={img1} />
                     <div data-src={img2} />
                     <div data-src={img3} />
                     <div data-src={img4} />
-                    <div data-src={img5} /> */}
+                    <div data-src={img5} />
                   </AutoplaySlider>
                 </div>
               </div>
