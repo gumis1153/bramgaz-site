@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import Deliver from "./delivers"
 import Slider from "react-slick"
 
 import "slick-carousel/slick/slick.css"
@@ -31,6 +32,7 @@ import logo20 from "../logos/roothkin.png"
 import logo21 from "../logos/wikend-n.jpg"
 import logo22 from "../logos/winkhaus.jpg"
 import logo23 from "../logos/wisniowski-logo.png"
+import Delivers from "./delivers"
 
 class Offer extends Component {
   state = {
@@ -76,10 +78,6 @@ class Offer extends Component {
             slidesToScroll: 1,
           },
         },
-
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ],
     }
     return (
@@ -118,6 +116,7 @@ class Offer extends Component {
             </div>
             <div className="deliversSlider">
               <Slider {...settings}>
+                {/* <Delivers /> */}
                 <div>
                   <img src={logo1} alt="" />
                 </div>
