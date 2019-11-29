@@ -25,43 +25,86 @@ import img8Min from "../gallery/8-min.jpg"
 // https://www.gatsbyjs.org/docs/client-data-fetching/
 // https://circleci.com/docs/
 
-const IMAGES = [
-  {
-    src: `${img1Max}`,
-    thumbnail: `${img1Min}`,
-  },
-  {
-    src: `${img2Max}`,
-    thumbnail: `${img2Min}`,
-  },
-  {
-    src: `${img3Max}`,
-    thumbnail: `${img3Min}`,
-  },
-  {
-    src: `${img4Max}`,
-    thumbnail: `${img4Min}`,
-  },
-  {
-    src: `${img5Max}`,
-    thumbnail: `${img5Min}`,
-  },
-  {
-    src: `${img6Max}`,
-    thumbnail: `${img6Min}`,
-  },
-  {
-    src: `${img7Max}`,
-    thumbnail: `${img7Min}`,
-  },
-  {
-    src: `${img8Max}`,
-    thumbnail: `${img8Min}`,
-  },
+let IMAGES = [
+  // {
+  //   src: `${img1Max}`,
+  //   thumbnail: `${img1Min}`,
+  // },
+  // {
+  //   src: `${img2Max}`,
+  //   thumbnail: `${img2Min}`,
+  // },
+  // {
+  //   src: `${img3Max}`,
+  //   thumbnail: `${img3Min}`,
+  // },
+  // {
+  //   src: `${img4Max}`,
+  //   thumbnail: `${img4Min}`,
+  // },
+  // {
+  //   src: `${img5Max}`,
+  //   thumbnail: `${img5Min}`,
+  // },
+  // {
+  //   src: `${img6Max}`,
+  //   thumbnail: `${img6Min}`,
+  // },
+  // {
+  //   src: `${img7Max}`,
+  //   thumbnail: `${img7Min}`,
+  // },
+  // {
+  //   src: `${img8Max}`,
+  //   thumbnail: `${img8Min}`,
+  // },
 ]
 
 class Realizations extends Component {
-  state = {}
+  state = {
+    isLoaded: false,
+  }
+
+  componentDidMount() {
+    fetch(
+      "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
+      {
+        method: "post",
+        headers: {
+          "gcms-locale": "RB, DE, EN",
+          "gcms-locale-no-default": true,
+          "Content-Type": "application/json",
+        },
+        body: '{"query": "{ galleries { description, photo { url } } }"}',
+      }
+    )
+      .then(res => res.json())
+      .then(data => {
+        let arr = []
+        const dataArray = Object.keys(data).map(i => data[i])
+        // console.log(dataArray)
+        dataArray.forEach(item => {
+          item.galleries.map(i => {
+            arr.push({
+              src: `${i.photo.url}`,
+              thumbnail: `${i.photo.url}`,
+              alt: i.description,
+            })
+            // console.log(arr)
+
+            IMAGES = arr
+            // console.log(typeof IMAGES)
+          })
+          this.setState({
+            isLoaded: true,
+          })
+        })
+      })
+      .catch(function(error) {
+        console.log(error)
+      })
+    this.render()
+  }
 
   render() {
     return (
@@ -72,28 +115,9 @@ class Realizations extends Component {
           </div>
 
           <div className="gallery">
-            {/* <StaticQuery
-              query={graphql`
-                {
-                  bramgazApi {
-                    galleries {
-                      description
-                      photo {
-                        url
-                      }
-                    }
-                  }
-                }
-              `}
-              render={({ bramgazApi: { galleries } }) =>
-                galleries.map(index => (
-                  <div className="">
-                    <img src={index.photo.url} alt={index.description} />
-                  </div>
-                ))
-              }
-            /> */}
-            <Gallery images={IMAGES} enableImageSelection={false} />
+            {this.state.isLoaded ? (
+              <Gallery images={IMAGES} enableImageSelection={false} />
+            ) : null}
           </div>
         </div>
       </section>

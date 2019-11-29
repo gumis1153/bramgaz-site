@@ -1,6 +1,5 @@
 import React, { Component } from "react"
-import { StaticQuery, graphql } from "gatsby"
-import Autoplay from "./autoplay"
+import Sliders from "./sliders"
 
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
@@ -16,7 +15,56 @@ import "../styles/homePage.css"
 const AutoplaySlider = withAutoplay(AwesomeSlider)
 
 class homePage extends Component {
-  state = {}
+  state = {
+    urls: [],
+  }
+
+  componentWillMount() {
+    this.render()
+    this.fetchData()
+  }
+
+  fetchData = () => {
+    fetch(
+      "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
+      {
+        method: "post",
+        headers: {
+          "gcms-locale": "RB, DE, EN",
+          "gcms-locale-no-default": true,
+          "Content-Type": "application/json",
+        },
+        body: '{"query": "{ homeSliders { photo { url } } }"}',
+      }
+    )
+      .then(res => res.json())
+      .then(data => {
+        let urls = []
+        // console.log(data.values())
+        const dataArray = Object.keys(data).map(i => data[i])
+        dataArray.forEach(item => {
+          item.homeSliders.map(i => {
+            urls.push(i.photo.url)
+            // console.log(urls)
+          })
+          this.setState({
+            urls: urls,
+          })
+          // console.log(`State: ${this.state.urls}`)
+          // const urlsObj = { ...urls }
+          // console.log(urlsObj)
+          // console.log(item.homeSliders)
+        })
+        this.setState({
+          urls: urls,
+        })
+        // console.log(`State to: ${this.state.urls}`)
+      })
+      .catch(function(error) {
+        console.log(error)
+      })
+    this.render()
+  }
 
   render() {
     const options = {
@@ -70,7 +118,12 @@ class homePage extends Component {
               </div>
               <div className="homeSlider">
                 <div className="homeSliderContainer">
-                  <AutoplaySlider {...options}>
+                  <AutoplaySlider
+                    className="AutoplaySliderContainer"
+                    {...options}
+                  >
+                    {/* <Sliders urls={this.state} /> */}
+                    {/* {console.log(this.state.urls)} */}
                     {/* <Autoplay /> */}
                     <div data-src={img1} />
                     <div data-src={img2} />
