@@ -115,73 +115,211 @@ class Offer extends Component {
             <div className="deliversSlider">
               <Slider {...settings}>
                 <div>
-                  <img src={logo1} alt="" />
+                  <a
+                    href="https://www.aluplast.com.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo1} alt="Logo firmy Aluplast" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo2} alt="" />
+                  <a
+                    href="https://asilo.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo2} alt="Logo firmy Asilo" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo3} alt="" />
+                  <a
+                    href="https://beninca.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo3} alt="Logo firmy Beninca" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo4} alt="" />
+                  <a
+                    href="https://classen.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo4} alt="Logo firmy Classen" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo5} alt="" />
+                  <a
+                    href="http://dierre.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo5} alt="Logo firmy Dierre" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo6} alt="" />
+                  <a
+                    href="https://www.gealan.de/pl/gealan-fenster-systeme-gmbh"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo6} alt="Logo firmy Gealan" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo7} alt="" />
+                  <a
+                    href="http://himotions.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo7} alt="Logo firmy Hi Motions" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo8} alt="" />
+                  <a
+                    href="https://www.hormann.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo8} alt="Logo firmy Hormann" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo9} alt="" />
+                  <a
+                    href="https://krispol.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo9} alt="Logo firmy Krispol" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo10} alt="" />
+                  <a
+                    href="https://www.loading-systems.com/pl-pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo10} alt="Logo firmy Loading System" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo11} alt="" />
+                  <a
+                    href="http://www.bigtor.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo11} alt="Logo firmy Big Tor" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo12} alt="" />
+                  <a
+                    href="https://www.drzwi-cal.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo12} alt="Logo firmy Cal" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo13} alt="" />
+                  <a
+                    href="http://www.polfendo.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo13} alt="Logo firmy Polfendo" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo14} alt="" />
+                  <a
+                    href="https://www.marantec.com/pl/strona-startowa.html"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo14} alt="Logo firmy Marantec" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo15} alt="" />
+                  <a
+                    href="https://www.metalpol.com.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo15} alt="Logo firmy Metalpol Furmaniak" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo16} alt="" />
+                  <a
+                    href="http://www.siatki-ogrodzeniowe.net/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo16} alt="Logo firmy Ogromet" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo17} alt="" />
+                  <a
+                    href="https://www.porta.com.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo17} alt="Logo firmy Porta" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo18} alt="" />
+                  <a
+                    href="https://www.rehau.com/pl-pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo18} alt="Logo firmy Rehau" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo19} alt="" />
+                  <a
+                    href="https://robelit.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo19} alt="Logo firmy Robelit" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo20} alt="" />
+                  <a
+                    href="https://roothkin.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo20} alt="Logo firmy Roothkin" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo21} alt="" />
+                  <a
+                    href="https://wiked.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo21} alt="Logo firmy Wikęd" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo22} alt="" />
+                  <a
+                    href="https://www.winkhaus.com/pl-pl"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo22} alt="Logo firmy Wink Haus" />
+                  </a>
                 </div>
                 <div>
-                  <img src={logo23} alt="" />
+                  <a
+                    href="https://www.wisniowski.pl/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <img src={logo23} alt="Logo firmy Wiśniowski" />
+                  </a>
                 </div>
               </Slider>
             </div>

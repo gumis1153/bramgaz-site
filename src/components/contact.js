@@ -13,13 +13,22 @@ const mapStyle = {
 
 class Contact extends Component {
   state = {
-    center: {
-      lat: 59.95,
-      lng: 30.33,
-    },
-    zoom: 11,
+    name: "",
+    email: "",
+    phone: "",
+    message: "",
   }
 
+  handleInputChange = e => {
+    this.setState({
+      name: e.target.value,
+    })
+    console.log(e.target.value)
+    // console.log(`Imię i nazwisko: ${this.state.name}`)
+    // console.log(`Email: ${this.state.email}`)
+    // console.log(`Nr telefonu: ${this.state.phone}`)
+    // console.log(`Wiadomość: ${this.state.message}`)
+  }
   render() {
     return (
       <section className="contact" id="contact">
@@ -27,31 +36,7 @@ class Contact extends Component {
           <div className="sectionTitle">
             <h1>Kontakt </h1>{" "}
           </div>
-          <form method="post" action="#">
-            <input
-              type="text"
-              name="name"
-              id="name"
-              placeholder="Imię i nazwisko"
-            />
-            <input type="email" name="email" id="email" placeholder="E-mail" />
-            <input
-              type="tel"
-              name="phone"
-              id="phone"
-              placeholder="Nr telefonu"
-            />
-            <textarea
-              name="message"
-              id="message"
-              cols="30"
-              rows="10"
-              placeholder="Treść wiadomości"
-            ></textarea>
-            <button className="submit" type="submit">
-              Wyślij
-            </button>
-          </form>
+
           <div className="contactInfo">
             <div className="contactInfoSection">
               <div className="contactInfoSectionTitle">
@@ -87,6 +72,44 @@ class Contact extends Component {
               style={mapStyle}
             ></iframe>
           </div>
+          <form method="post" action="#">
+            <input
+              type="text"
+              name="name"
+              id="name"
+              placeholder="Imię i nazwisko"
+              // value={this.state.name}
+              // onChange={this.handleInputChange}
+            />
+            <input
+              type="email"
+              name="email"
+              id="email"
+              placeholder="E-mail"
+              // value={this.state.email}
+              //  onChange={this.handleInputChange}
+            />
+            <input
+              type="tel"
+              name="phone"
+              id="phone"
+              placeholder="Nr telefonu"
+              // value={this.state.phone}
+              // onChange={this.handleInputChange}
+            />
+            <textarea
+              name="message"
+              id="message"
+              cols="30"
+              rows="10"
+              placeholder="Treść wiadomości"
+              // value={this.state.message}
+              // onChange={this.handleInputChange}
+            ></textarea>
+            <button className="submit" type="submit">
+              Wyślij
+            </button>
+          </form>
         </div>
       </section>
     )

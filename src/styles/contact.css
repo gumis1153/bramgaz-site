@@ -4,7 +4,8 @@ section.contact {
 
 section.contact .wrapper {
   display: grid;
-  grid-template-rows: 80px 600px 1fr 200px 10px;
+  /* grid-template-rows: 80px 600px 1fr 200px 10px; */
+  grid-template-rows: 80px 1fr 200px 500px 10px;
 }
 
 section.contact .wrapper form {
@@ -88,6 +89,7 @@ section.contact .wrapper form button.submit {
   padding-left: 0;
   padding: 15px 20px;
   cursor: pointer;
+  margin-top: 20px;
 }
 
 .contactInfo {
@@ -148,7 +150,7 @@ section.contact .wrapper form button.submit {
   section.contact .wrapper {
     width: 800px;
     grid-gap: 20px;
-    grid-template-rows: 80px 390px 1fr 200px 10px;
+    grid-template-rows: 80px 1fr 200px 390px 10px;
   }
 
   section.contact .wrapper form {

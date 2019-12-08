@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import Sliders from "./sliders"
+import { Link } from "react-scroll"
 
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
@@ -45,20 +45,14 @@ class homePage extends Component {
         dataArray.forEach(item => {
           item.homeSliders.map(i => {
             urls.push(i.photo.url)
-            // console.log(urls)
           })
           this.setState({
-            urls: urls,
+            urls,
           })
-          // console.log(`State: ${this.state.urls}`)
-          // const urlsObj = { ...urls }
-          // console.log(urlsObj)
-          // console.log(item.homeSliders)
         })
         this.setState({
           urls: urls,
         })
-        // console.log(`State to: ${this.state.urls}`)
       })
       .catch(function(error) {
         console.log(error)
@@ -74,6 +68,13 @@ class homePage extends Component {
       fillParent: true,
       bullets: false,
       className: "aws-btn",
+    }
+    const LinkOptions = {
+      activeClass: "activeButton",
+      spy: true,
+      smooth: true,
+      offset: -80,
+      duration: 600,
     }
     return (
       <section className="homePage" id="start">
@@ -103,18 +104,9 @@ class homePage extends Component {
                 <p>To nasza specjalność</p>
               </div>
               <div>
-                <button
-                  className="homePageButton"
-                  onClick={() => {
-                    document.querySelector("section.about").scrollIntoView({
-                      behavior: "smooth",
-                      block: "start",
-                      inline: "nearest",
-                    })
-                  }}
-                >
-                  Czytaj więcej
-                </button>
+                <Link {...LinkOptions} to="about">
+                  <button className="homePageButton">Czytaj więcej</button>
+                </Link>
               </div>
               <div className="homeSlider">
                 <div className="homeSliderContainer">
@@ -122,9 +114,6 @@ class homePage extends Component {
                     className="AutoplaySliderContainer"
                     {...options}
                   >
-                    {/* <Sliders urls={this.state} /> */}
-                    {/* {console.log(this.state.urls)} */}
-                    {/* <Autoplay /> */}
                     <div data-src={img1} />
                     <div data-src={img2} />
                     <div data-src={img3} />

@@ -2,6 +2,7 @@ import React, { Component } from "react"
 import BramgazLogo from "../images/bramgaz-logo.png"
 import "../styles/header.css"
 import "../components/layout.css"
+import { Link } from "react-scroll"
 
 class Header extends Component {
   state = {
@@ -14,15 +15,22 @@ class Header extends Component {
   }
 
   render() {
+    const options = {
+      activeClass: "activeButton",
+      spy: true,
+      smooth: true,
+      offset: -80,
+      duration: 600,
+    }
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
-        document.querySelectorAll(".desktop button").forEach(element => {
+        document.querySelectorAll(".desktop a").forEach(element => {
           element.style.color = "#00366F"
           // console.log("tu nie ma się renderować")
         })
         document.querySelector("header").classList.add("active")
       } else {
-        document.querySelectorAll(".desktop button").forEach(element => {
+        document.querySelectorAll(".desktop a").forEach(element => {
           element.style.color = "#FFFFFF"
         })
         document.querySelector("header").classList.remove("active")
@@ -77,73 +85,41 @@ class Header extends Component {
             </ul>
           </nav>
           <nav className="desktop">
-            <button
-              onClick={() => {
-                document.getElementById("start").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              Start
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("about").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              O nas
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("offer").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              Oferta
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("gallery").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              Realizacje
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("certifications").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              {" "}
-              Certyfikaty
-            </button>
-            <button
-              onClick={() => {
-                document.getElementById("contact").scrollIntoView({
-                  behavior: "smooth",
-                  block: "start",
-                  inline: "nearest",
-                })
-              }}
-            >
-              Kontakt
-            </button>
+            <ul>
+              <li>
+                <Link {...options} to="start">
+                  Start{" "}
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link {...options} to="about">
+                  O nas
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link {...options} to="offer">
+                  Oferta
+                </Link>
+              </li>
+              <li>
+                <Link {...options} to="gallery">
+                  Realizacje
+                </Link>
+              </li>
+              <li>
+                {" "}
+                <Link {...options} to="certifications">
+                  Certyfikaty
+                </Link>
+              </li>
+              <li>
+                <Link {...options} to="contact">
+                  Kontakt
+                </Link>
+              </li>
+            </ul>
           </nav>
           <div className="logo">
             <a href="#">
