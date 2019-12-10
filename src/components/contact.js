@@ -17,18 +17,113 @@ class Contact extends Component {
     email: "",
     phone: "",
     message: "",
+    checkboxCheck: false,
+    nameError: "",
+    emailError: "",
+    messageError: "",
+    checkboxError: "",
+    isValid: false,
   }
 
-  handleInputChange = e => {
+  validate = () => {
+    let nameError = ""
+    let emailError = ""
+    let messageError = ""
+    let checkboxError = ""
+
+    if (this.state.name.length <= 2) {
+      nameError = "Wprowadź poprawne imię i nazwisko."
+    } else nameError = ""
+
+    if (nameError) {
+      this.setState({ nameError })
+    }
+
+    if (this.state.email.length === 0) {
+      emailError = "Wprowadź poprawny adres email."
+    } else emailError = ""
+
+    if (emailError) {
+      this.setState({ emailError })
+    }
+
+    if (this.state.message.length <= 5) {
+      messageError = "Wprowadź treść wiadomości."
+    } else messageError = ""
+
+    if (messageError) {
+      this.setState({ messageError })
+    }
+
+    if (!this.state.checkboxCheck) {
+      checkboxError =
+        "Aby wysłać wiadomość musisz zaakceptować regulamin polityki prywatności firmy Bramgaz."
+    } else checkboxError = ""
+
+    if (checkboxError) {
+      this.setState({ checkboxError })
+    }
+
+    if (
+      nameError === "" &&
+      emailError === "" &&
+      messageError === "" &&
+      checkboxError === ""
+    ) {
+      this.setState({
+        isValid: true,
+      })
+      document.getElementById("contactForm").submit()
+    }
+    // else {
+    //   this.setState({
+    //     isValid: false,
+    //   })
+    // }
+  }
+
+  handleSubmit = e => {
+    this.setState({
+      nameError: "",
+      emailError: "",
+      messageError: "",
+      checkboxError: "",
+    })
+    e.preventDefault()
+    this.validate()
+    console.log(this.validate)
+  }
+
+  handleInputName = e => {
     this.setState({
       name: e.target.value,
     })
-    console.log(e.target.value)
-    // console.log(`Imię i nazwisko: ${this.state.name}`)
-    // console.log(`Email: ${this.state.email}`)
-    // console.log(`Nr telefonu: ${this.state.phone}`)
-    // console.log(`Wiadomość: ${this.state.message}`)
   }
+
+  handleInputEmail = e => {
+    this.setState({
+      email: e.target.value,
+    })
+  }
+
+  handleInputPhone = e => {
+    this.setState({
+      phone: e.target.value,
+    })
+  }
+
+  handleInputMessage = e => {
+    this.setState({
+      message: e.target.value,
+    })
+  }
+
+  handleCheckbox = () => {
+    this.setState({
+      checkboxCheck: !this.state.checkboxCheck,
+    })
+  }
+
   render() {
     return (
       <section className="contact" id="contact">
@@ -72,30 +167,33 @@ class Contact extends Component {
               style={mapStyle}
             ></iframe>
           </div>
-          <form method="post" action="#">
+          <form
+            id="contactForm"
+            onSubmit={this.handleSubmit}
+            method="post"
+            action="https://formspree.io/jakubowski656@gmail.com"
+          >
             <input
               type="text"
               name="name"
               id="name"
               placeholder="Imię i nazwisko"
-              // value={this.state.name}
-              // onChange={this.handleInputChange}
+              onChange={this.handleInputName}
             />
+
             <input
               type="email"
-              name="email"
+              name="_replyto"
               id="email"
               placeholder="E-mail"
-              // value={this.state.email}
-              //  onChange={this.handleInputChange}
+              onChange={this.handleInputEmail}
             />
             <input
               type="tel"
               name="phone"
               id="phone"
               placeholder="Nr telefonu"
-              // value={this.state.phone}
-              // onChange={this.handleInputChange}
+              onChange={this.handleInputPhone}
             />
             <textarea
               name="message"
@@ -103,12 +201,47 @@ class Contact extends Component {
               cols="30"
               rows="10"
               placeholder="Treść wiadomości"
-              // value={this.state.message}
-              // onChange={this.handleInputChange}
+              onChange={this.handleInputMessage}
             ></textarea>
-            <button className="submit" type="submit">
-              Wyślij
-            </button>
+            <div className="errors">
+              {this.state.nameError ? (
+                <p className="nameError error">{this.state.nameError}</p>
+              ) : null}
+              {this.state.emailError ? (
+                <p className="emailError error">{this.state.emailError}</p>
+              ) : null}
+              {this.state.phoneError ? (
+                <p className="phoneError error">{this.state.phoneError}</p>
+              ) : null}
+              {this.state.messageError ? (
+                <p className="messageError error">{this.state.messageError}</p>
+              ) : null}
+              {this.state.checkboxError ? (
+                <p className="checkboxError error">
+                  {this.state.checkboxError}
+                </p>
+              ) : null}
+            </div>
+            <div className="checkbox">
+              <input
+                onChange={this.handleCheckbox}
+                type="checkbox"
+                name="checkbox"
+                id="checkbox"
+              />
+              <label htmlFor="checkbox">
+                Oświadczam, że zapoznałam/em się z{" "}
+                <a href="../files/RODO.pdf">
+                  Regulaminem polityki prywatnosci(RODO)
+                </a>{" "}
+                firmy BRAMGAZ i akceptuję jego warunki.
+              </label>
+            </div>
+            <div className="submit">
+              <button className="submit" type="submit">
+                Wyślij
+              </button>
+            </div>
           </form>
         </div>
       </section>
