@@ -74,8 +74,8 @@ function SEO({ description, lang, meta, title }) {
 
 SEO.defaultProps = {
   lang: `pl`,
-  meta: [],
-  description: ``,
+  meta: ["bramy", "drzwi", "napędy", "okna", "Leszno", "montaż", "serwis"],
+  description: `Bramy, drzwi, napędy, okna. ul. Chociszewskiego 37a, 64-100 Leszno`,
 }
 
 SEO.propTypes = {

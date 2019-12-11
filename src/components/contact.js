@@ -1,4 +1,5 @@
 import React, { Component } from "react"
+import pdf from "../files/RODO.pdf"
 
 import "../styles/contact.css"
 
@@ -231,10 +232,8 @@ class Contact extends Component {
               />
               <label htmlFor="checkbox">
                 Oświadczam, że zapoznałam/em się z{" "}
-                <a href="../files/RODO.pdf">
-                  Regulaminem polityki prywatnosci(RODO)
-                </a>{" "}
-                firmy BRAMGAZ i akceptuję jego warunki.
+                <a href={pdf}>Regulaminem polityki prywatnosci(RODO)</a> firmy
+                BRAMGAZ i akceptuję jego warunki.
               </label>
             </div>
             <div className="submit">

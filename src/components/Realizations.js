@@ -1,9 +1,10 @@
 import React, { Component } from "react"
 
-import Gallery from "react-grid-gallery"
+// import Gallery from "react-grid-gallery"
+import Gallery from "react-photo-gallery"
 import "../styles/realizations.css"
 
-let IMAGES = []
+let photos = []
 
 class Realizations extends Component {
   state = {
@@ -20,7 +21,8 @@ class Realizations extends Component {
           "gcms-locale-no-default": true,
           "Content-Type": "application/json",
         },
-        body: '{"query": "{ galleries { description, photo { url } } }"}',
+        body:
+          '{"query": "{ galleries { description, photo { url, width, height } } }"}',
       }
     )
       .then(res => res.json())
@@ -32,15 +34,18 @@ class Realizations extends Component {
           item.galleries.map(i => {
             arr.push({
               src: `${i.photo.url}`,
-              thumbnail: `${i.photo.url}`,
-              // thumbnailWidth: 320,
-              // thumbnailHeight: 174,
-              alt: i.description,
-              imageCountSeparator: `z`,
+              width: `${i.photo.width}`,
+              height: `${i.photo.height}`,
+              // sizes: "100%",
+              // thumbnail: `${i.photo.url}`,
+              // thumbnailWidth: 272,
+              // thumbnailHeight: auto,
+              // alt: i.description,
+              // imageCountSeparator: `z`,
             })
             // console.log(arr)
 
-            IMAGES = arr
+            photos = arr
             // console.log(typeof IMAGES)
           })
           this.setState({
@@ -54,6 +59,14 @@ class Realizations extends Component {
     this.render()
   }
 
+  columns(containerWidth) {
+    let columns = 1
+    if (containerWidth >= 500) columns = 2
+    if (containerWidth >= 900) columns = 3
+    if (containerWidth >= 1024) columns = 4
+    return columns
+  }
+
   render() {
     return (
       <section className="gallery" id="gallery">
@@ -65,10 +78,10 @@ class Realizations extends Component {
           <div className="gallery">
             {this.state.isLoaded ? (
               <Gallery
-                images={IMAGES}
-                enableImageSelection={false}
-                // lightboxWidth={100}
-                rowHeight={200}
+                photos={photos}
+                direction="column"
+                // columns={1}
+                columns={this.columns}
               />
             ) : null}
           </div>

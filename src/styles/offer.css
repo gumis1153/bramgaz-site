@@ -41,6 +41,7 @@ section.offer .wrapper {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   cursor: pointer;
+  outline: none;
 }
 
 .clientBtn.active {
@@ -140,9 +141,11 @@ div.slick-slid.slick-active.slick-current div div {
   -ms-flex-pack: center;
   justify-content: center;
 }
+
 div.slick-slid.slick-active.slick-current div div {
   position: relative;
 }
+
 /* div.slick-slid.slick-active.slick-current div div img {
  
   margin: 0 auto;

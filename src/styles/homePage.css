@@ -2,8 +2,6 @@ section.homePage {
   width: 100%;
   height: 100vh;
   background-image: url("https://media.graphcms.com/0i8sqfobREWtOKZmZhdF");
-  /* background-image: url("https://media.graphcms.com/agqt4MGRRaeNwmx8MqdA"); */
-  /* background-color: #00366F; */
   background-size: auto 100%;
   background-position: center;
   background-attachment: fixed;
@@ -104,26 +102,9 @@ section.homePage {
   border-color: #faa922;
 }
 
-/* .homePageButton::after {
-  position: absolute;
-  top: 0;
-  left: 0;
-  -webkit-transform: translateY(100%);
-  transform: translateY(100%);
-  content: "";
-  display: block;
-  width: 100%;
-  height: 100%;
-  background-color: #faa922;
-  -webkit-transition: .4s;
-  transition: .4s;
-  z-index: 10;
+div.homePageContent div a {
+  margin: 0 auto;
 }
-
-.homePageButton:hover:after {
-  -webkit-transform: translateY(0);
-  transform: translateY(0);
-} */
 
 .homePageContent div.homeSlider {
   grid-column: 2 / 3;
@@ -209,8 +190,23 @@ section.homePage {
   }
 
   .homePageButton {
-    padding: 10px 25px;
+    padding: 8px 22px;
     font-size: 10px;
+  }
+}
+
+@media (min-width: 568px) and (orientation: portrait) {
+  .homePageContent div h1 {
+    font-size: 42px;
+  }
+
+  .homePageContent div p {
+    font-size: 18px;
+  }
+
+  .homePageButton {
+    margin-top: 30px;
+    font-size: 14px;
   }
 }
 
