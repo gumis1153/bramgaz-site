@@ -1,13 +1,13 @@
 import React, { Component } from "react"
 import { Link } from "react-scroll"
-
+// import { useStaticQuery, graphql } from "gatsby"
 import AwesomeSlider from "react-awesome-slider"
 import withAutoplay from "react-awesome-slider/dist/autoplay"
-import img1 from "../images/home1.jpg"
-import img2 from "../images/home2.jpg"
-import img3 from "../images/home3.jpg"
-import img4 from "../images/home4.jpg"
-import img5 from "../images/home5.jpg"
+import img1 from "../static/images/home1.jpg"
+import img2 from "../static/images/home2.jpg"
+import img3 from "../static/images/home3.jpg"
+import img4 from "../static/images/home4.jpg"
+import img5 from "../static/images/home5.jpg"
 import "react-awesome-slider/dist/styles.css"
 
 import "../styles/homePage.css"
@@ -19,46 +19,46 @@ class homePage extends Component {
     urls: [],
   }
 
-  componentWillMount() {
-    this.render()
-    this.fetchData()
-  }
+  // componentWillMount() {
+  //   this.render()
+  //   this.fetchData()
+  // }
 
-  fetchData = () => {
-    fetch(
-      "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
-      {
-        method: "post",
-        headers: {
-          "gcms-locale": "RB, DE, EN",
-          "gcms-locale-no-default": true,
-          "Content-Type": "application/json",
-        },
-        body: '{"query": "{ homeSliders { photo { url } } }"}',
-      }
-    )
-      .then(res => res.json())
-      .then(data => {
-        let urls = []
-        // console.log(data.values())
-        const dataArray = Object.keys(data).map(i => data[i])
-        dataArray.forEach(item => {
-          item.homeSliders.map(i => {
-            urls.push(i.photo.url)
-          })
-          this.setState({
-            urls,
-          })
-        })
-        this.setState({
-          urls: urls,
-        })
-      })
-      .catch(function(error) {
-        console.log(error)
-      })
-    this.render()
-  }
+  // fetchData = () => {
+  //   fetch(
+  //     "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
+  //     {
+  //       method: "post",
+  //       headers: {
+  //         "gcms-locale": "RB, DE, EN",
+  //         "gcms-locale-no-default": true,
+  //         "Content-Type": "application/json",
+  //       },
+  //       body: '{"query": "{ homeSliders { photo { url } } }"}',
+  //     }
+  //   )
+  //     .then(res => res.json())
+  //     .then(data => {
+  //       let urls = []
+
+  //       const dataArray = Object.keys(data).map(i => data[i])
+  //       dataArray.forEach(item => {
+  //         item.homeSliders.map(i => {
+  //           urls.push(i.photo.url)
+  //         })
+  //         this.setState({
+  //           urls,
+  //         })
+  //       })
+  //       this.setState({
+  //         urls: urls,
+  //       })
+  //     })
+  //     .catch(function(error) {
+  //       console.log(error)
+  //     })
+  //   this.render()
+  // }
 
   render() {
     const options = {

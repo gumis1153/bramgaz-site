@@ -6,13 +6,8 @@ module.exports = {
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`,
-      },
-    },
+    `gatsby-plugin-sharp`,
+    `gatsby-transformer-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -28,20 +23,30 @@ module.exports = {
     },
 
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `pages`,
+        path: `${__dirname}/src/pages/`,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-sharp`,
+      options: {
+        useMozJpeg: false,
+        stripMetadata: true,
+        defaultQuality: 75,
+      },
+    },
+
+    {
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Oswald`,
-            subsets: [`latin-ext`],
-            variants: [`400`, `500`],
-          },
-          {
-            family: `Quicksand`,
-            subsets: [`latin-ext`],
-            variants: [`400`, `500`],
-          },
+          `Oswald\:400,500`,
+          `Quicksand\:400,500`, // you can also specify font weights and styles
         ],
+        display: "swap",
       },
     },
 

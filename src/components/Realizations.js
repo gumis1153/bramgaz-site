@@ -36,12 +36,6 @@ class Realizations extends Component {
               src: `${i.photo.url}`,
               width: `${i.photo.width}`,
               height: `${i.photo.height}`,
-              // sizes: "100%",
-              // thumbnail: `${i.photo.url}`,
-              // thumbnailWidth: 272,
-              // thumbnailHeight: auto,
-              // alt: i.description,
-              // imageCountSeparator: `z`,
             })
             // console.log(arr)
 

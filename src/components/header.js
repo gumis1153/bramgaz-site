@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import BramgazLogo from "../images/bramgaz-logo.png"
+import { StaticQuery, graphql } from "gatsby"
 import "../styles/header.css"
 import "../components/layout.css"
 import { Link } from "react-scroll"
@@ -14,14 +14,7 @@ class Header extends Component {
     })
   }
 
-  render() {
-    const options = {
-      activeClass: "activeButton",
-      spy: true,
-      smooth: true,
-      offset: -80,
-      duration: 600,
-    }
+  componentDidMount() {
     window.addEventListener("scroll", () => {
       if (window.scrollY > 100) {
         document.querySelectorAll(".desktop a").forEach(element => {
@@ -36,6 +29,17 @@ class Header extends Component {
         document.querySelector("header").classList.remove("active")
       }
     })
+  }
+
+  render() {
+    const options = {
+      activeClass: "activeButton",
+      spy: true,
+      smooth: true,
+      offset: -80,
+      duration: 600,
+    }
+
     return (
       <header className={`headerHeight`}>
         <div className="wrapper">
@@ -122,8 +126,26 @@ class Header extends Component {
             </ul>
           </nav>
           <div className="logo">
-            <a href="#">
-              <img src={BramgazLogo} alt="Logo firmy bramgaz" />
+            <a href="/">
+              <StaticQuery
+                query={graphql`
+                  {
+                    bramgazApi {
+                      logoes {
+                        id
+                        photo {
+                          url
+                        }
+                      }
+                    }
+                  }
+                `}
+                render={({ bramgazApi: { logoes } }) =>
+                  logoes.map(index => (
+                    <img src={index.photo.url} alt={"Logo firmy Bramgaz"} />
+                  ))
+                }
+              />
             </a>
           </div>
         </div>

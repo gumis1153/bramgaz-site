@@ -182,7 +182,7 @@ div.homePageContent div a {
   }
 
   .homePageContent div h1 {
-    font-size: 28px;
+    font-size: 7vh;
   }
 
   .homePageContent div p {
@@ -190,7 +190,7 @@ div.homePageContent div a {
   }
 
   .homePageButton {
-    padding: 8px 22px;
+    padding: 8px 15px;
     font-size: 10px;
   }
 }
@@ -201,7 +201,7 @@ div.homePageContent div a {
   }
 
   .homePageContent div p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .homePageButton {
@@ -233,6 +233,12 @@ div.homePageContent div a {
 }
 
 @media (min-width: 1024px) {
+
+  .homePageButton {
+    padding: 10px 25px;
+    font-size: 14px;
+  }
+
   .homePageContent {
     grid-template-columns: 30% 70%;
     grid-template-rows: 15% 15% 15% 15% 70px 1fr;

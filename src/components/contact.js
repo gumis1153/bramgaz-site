@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import pdf from "../files/RODO.pdf"
+import pdf from "../static/RODO.pdf"
 
 import "../styles/contact.css"
 
@@ -172,7 +172,7 @@ class Contact extends Component {
             id="contactForm"
             onSubmit={this.handleSubmit}
             method="post"
-            action="https://formspree.io/jakubowski656@gmail.com"
+            action="https://formspree.io/biuro@bramgaz.pl"
           >
             <input
               type="text"

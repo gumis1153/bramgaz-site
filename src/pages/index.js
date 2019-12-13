@@ -1,4 +1,5 @@
 import React from "react"
+import { Helmet } from "react-helmet"
 
 import Header from "../components/header"
 import HomePage from "../components/homePage"
@@ -12,6 +13,14 @@ import "../components/layout.css"
 
 const IndexPage = () => (
   <>
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>Bramgaz | Leszno - Bramy. Drzwi. Napędy. Okna</title>
+      <meta
+        name="description"
+        content="Bramy, drzwi, napędy, okna. ul. Chociszewskiego 37a, 64-100 Leszno"
+      />
+    </Helmet>
     <Header />
     <HomePage />
     <About />

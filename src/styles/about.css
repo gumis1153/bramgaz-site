@@ -15,6 +15,7 @@ section.about .wrapper {
     position: relative;
     font-family: Oswald, sans-serif;
     font-size: 32px;
+    font-weight: 400;
     text-transform: uppercase;
     color: #00366F;
     line-height: 80px;
@@ -134,6 +135,7 @@ article p {
     .aboutPhoto h1 {
         width: 90%;
         font-size: 60px;
+        font-weight: 400;
         line-height: 86px;
     }
 }
