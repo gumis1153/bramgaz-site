@@ -1,11 +1,11 @@
 section.homePage {
   width: 100%;
   height: 100vh;
-  background-image: url("https://media.graphcms.com/0i8sqfobREWtOKZmZhdF");
-  background-size: auto 100%;
-  background-position: center;
-  background-attachment: fixed;
-  background-repeat: no-repeat;
+}
+
+div.BackgroundImage {
+  width: 100%;
+  height: 100%;
 }
 
 .bgcBlurr {
@@ -15,19 +15,16 @@ section.homePage {
 }
 
 .homePageContent {
-  /* position: relative; */
   position: absolute;
   top: 55%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
   display: grid;
-  /* grid-template-rows: 50px 80px 80px 80px 60px 1fr; */
   grid-template-rows: 50px 18% 18% 18% 55px 1fr;
   grid-template-columns: 1fr;
   width: 100%;
   height: 80%;
-  /* background-color: aqua; */
 }
 
 .homePageContent .blueRectangle {
@@ -81,8 +78,6 @@ section.homePage {
 
 .homePageButton {
   position: relative;
-  /* -webkit-box-sizing: border-box;
-          box-sizing: border-box; */
   display: block;
   margin: 0 auto;
   padding: 15px 30px;
@@ -233,7 +228,6 @@ div.homePageContent div a {
 }
 
 @media (min-width: 1024px) {
-
   .homePageButton {
     padding: 10px 25px;
     font-size: 14px;

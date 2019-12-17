@@ -10,6 +10,7 @@ section.certifications div.slick-slider {
 section.certifications .wrapper {
     display: grid;
     grid-template-rows: 80px 1fr 200px 40px;
+
 }
 
 section.certifications .wrapper .sectionTitle h1 {
@@ -26,7 +27,6 @@ section.certifications .wrapper p {
     font-family: Quicksand, sans-serif;
     font-weight: 500;
     font-size: 14px;
-    /* text-align: justify; */
     line-height: 20px;
     color: #ffffff;
     margin: 15px 0;

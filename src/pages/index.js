@@ -1,6 +1,6 @@
 import React from "react"
 import { Helmet } from "react-helmet"
-
+import favicon from "../icons/favicon.png"
 import Header from "../components/header"
 import HomePage from "../components/homePage"
 import About from "../components/about"
@@ -15,6 +15,7 @@ const IndexPage = () => (
   <>
     <Helmet>
       <meta charSet="utf-8" />
+      <link rel="icon" href={favicon} />
       <title>Bramgaz | Leszno - Bramy. Drzwi. Napędy. Okna</title>
       <meta
         name="description"

@@ -1,5 +1,5 @@
 import React, { Component } from "react"
-import pdf from "../static/RODO.pdf"
+import pdf from "../files/RODO.pdf"
 
 import "../styles/contact.css"
 
@@ -76,11 +76,6 @@ class Contact extends Component {
       })
       document.getElementById("contactForm").submit()
     }
-    // else {
-    //   this.setState({
-    //     isValid: false,
-    //   })
-    // }
   }
 
   handleSubmit = e => {
@@ -92,7 +87,6 @@ class Contact extends Component {
     })
     e.preventDefault()
     this.validate()
-    console.log(this.validate)
   }
 
   handleInputName = e => {
@@ -150,7 +144,7 @@ class Contact extends Component {
                 Tel. <a href="tel:655296109">(65) 529 61 09</a>
               </p>
               <p>
-                E-mail:<a href="mailto:biuro@bramgaz.pl">biuro@bramgaz.pl</a>
+                E-mail: <a href="mailto:biuro@bramgaz.pl">biuro@bramgaz.pl</a>
               </p>
             </div>
             <div className="contactInfoSection">

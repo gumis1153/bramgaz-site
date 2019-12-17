@@ -4,7 +4,6 @@ section.contact {
 
 section.contact .wrapper {
   display: grid;
-  /* grid-template-rows: 80px 600px 1fr 200px 10px; */
   grid-template-rows: 80px 1fr 200px 750px 10px;
 }
 
@@ -24,11 +23,8 @@ section.contact .wrapper form textarea {
   font-family: Quicksand, sans-serif;
   font-weight: 500;
   color: #00366f;
-  border: none;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(0, 0, 0, 0.2);
   padding-left: 10px;
-  /* margin-top: 20px; */
   margin: 0 auto;
 }
 
@@ -107,7 +103,6 @@ section.contact .wrapper form textarea::placeholder {
 }
 
 div.submit {
-  /* grid-row: 6 / 7; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -135,7 +130,6 @@ section.contact .wrapper form button.submit {
   transform: scale(1);
   -webkit-transition: .3s;
   transition: .3s;
-  /* margin-top: 20px; */
 }
 
 
@@ -182,7 +176,6 @@ section.contact .wrapper form button.submit {
 }
 
 section.contact .wrapper form .checkbox {
-  /* grid-row: 5 / 6; */
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

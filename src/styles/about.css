@@ -52,7 +52,6 @@ article p {
     font-family: Quicksand, sans-serif;
     font-weight: 500;
     font-size: 14px;
-    /* text-align: justify; */
     line-height: 20px;
     color: #00366F;
     margin-bottom: 15px;
@@ -112,6 +111,7 @@ article p {
         width: 100%;
         grid-column: 2 / 3;
         grid-row: 2 / 4;
+
     }
 
     article {

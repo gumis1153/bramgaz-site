@@ -1,6 +1,4 @@
 import React, { Component } from "react"
-
-// import Gallery from "react-grid-gallery"
 import Gallery from "react-photo-gallery"
 import "../styles/realizations.css"
 
@@ -29,7 +27,7 @@ class Realizations extends Component {
       .then(data => {
         let arr = []
         const dataArray = Object.keys(data).map(i => data[i])
-        // console.log(dataArray)
+
         dataArray.forEach(item => {
           item.galleries.map(i => {
             arr.push({
@@ -37,10 +35,7 @@ class Realizations extends Component {
               width: `${i.photo.width}`,
               height: `${i.photo.height}`,
             })
-            // console.log(arr)
-
             photos = arr
-            // console.log(typeof IMAGES)
           })
           this.setState({
             isLoaded: true,
@@ -74,7 +69,6 @@ class Realizations extends Component {
               <Gallery
                 photos={photos}
                 direction="column"
-                // columns={1}
                 columns={this.columns}
               />
             ) : null}

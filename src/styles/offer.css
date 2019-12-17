@@ -25,7 +25,6 @@ section.offer .wrapper {
   grid-row: 1 / 2;
 }
 
-/* zastanów się nad animacją przycisków */
 .clientBtn {
   font-family: Oswald, sans-serif;
   font-size: 14px;
@@ -90,7 +89,6 @@ section.offer .wrapper {
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
-  /* width: 100%; */
   width: auto;
   height: 100%;
 }
@@ -145,11 +143,6 @@ div.slick-slid.slick-active.slick-current div div {
 div.slick-slid.slick-active.slick-current div div {
   position: relative;
 }
-
-/* div.slick-slid.slick-active.slick-current div div img {
- 
-  margin: 0 auto;
-} */
 
 div.slick-slider {
   grid-row: 3 / 4;

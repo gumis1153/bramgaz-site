@@ -1,7 +1,7 @@
 import React from "react"
 import SEO from "../components/seo"
 import "../styles/404.css"
-import logo from "../static/images/bramgaz-logo.png"
+import logo from "../images/bramgaz-logo.png"
 
 const NotFoundPage = () => (
   <section className="error">

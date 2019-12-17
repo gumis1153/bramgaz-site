@@ -1,10 +1,14 @@
 module.exports = {
+  pathPrefix: `/test`,
   siteMetadata: {
     title: `Bramgaz | Leszno - Bramy. Drzwi. Napędy. Okna`,
     description: `Bramy, drzwi, napędy, okna. ul. Chociszewskiego 37a, 64-100 Leszno`,
     author: `piotrjakubowski.pl`,
   },
   plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
@@ -12,6 +16,7 @@ module.exports = {
     `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-plugin-manifest`,
+      icon: `src/images/favicon.png`,
       options: {
         name: `gatsby-starter-default`,
         short_name: `starter`,
@@ -28,6 +33,10 @@ module.exports = {
         name: `pages`,
         path: `${__dirname}/src/pages/`,
       },
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
     },
 
     {
@@ -42,10 +51,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Oswald\:400,500`,
-          `Quicksand\:400,500`, // you can also specify font weights and styles
-        ],
+        fonts: [`Oswald\:400,500`, `Quicksand\:400,500`],
         display: "swap",
       },
     },
@@ -59,9 +65,5 @@ module.exports = {
           "https://api-euwest.graphcms.com/v1/ck2yzig7o0agh01fbdg2696we/master",
       },
     },
-
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
   ],
 }

@@ -5,17 +5,17 @@ import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
 import "../styles/certifications.css"
 
-import c1 from "../static/certifications/c1.jpg"
-import c2 from "../static/certifications/c2.jpg"
-import c3 from "../static/certifications/c3.jpg"
-import c4 from "../static/certifications/c4.jpg"
-import c5 from "../static/certifications/c5.jpg"
-import c6 from "../static/certifications/c6.jpg"
-import c7 from "../static/certifications/c7.jpg"
-import c8 from "../static/certifications/c8.jpg"
-import c9 from "../static/certifications/c9.jpg"
-import c10 from "../static/certifications/c10.jpg"
-import c11 from "../static/certifications/c11.jpg"
+import c1 from "../images/c1.jpg"
+import c2 from "../images/c2.jpg"
+import c3 from "../images/c3.jpg"
+import c4 from "../images/c4.jpg"
+import c5 from "../images/c5.jpg"
+import c6 from "../images/c6.jpg"
+import c7 from "../images/c7.jpg"
+import c8 from "../images/c8.jpg"
+import c9 from "../images/c9.jpg"
+import c10 from "../images/c10.jpg"
+import c11 from "../images/c11.jpg"
 
 class Certifications extends Component {
   state = {}
@@ -42,10 +42,6 @@ class Certifications extends Component {
             slidesToShow: 1,
           },
         },
-
-        // You can unslick at a given breakpoint now by adding:
-        // settings: "unslick"
-        // instead of a settings object
       ],
     }
     return (
@@ -63,37 +59,61 @@ class Certifications extends Component {
           <div className="certificationsSlider">
             <Slider {...settings}>
               <div>
-                <img src={c1} alt="" />
+                <img
+                  src={c1}
+                  alt="Udział w warszatatach montażowych produktów marki Eclisse."
+                />
               </div>
               <div>
-                <img src={c2} alt="" />
+                <img
+                  src={c2}
+                  alt="Innowacje w drzwiach zewnętrznych, trendy w drzwiach wewnętrznych i panelach, nowoczesne systemy drzwi chowanych w ścianę oraz klamki."
+                />
               </div>
               <div>
-                <img src={c3} alt="" />
+                <img src={c3} alt="Sprzedawca kwalifikowany drzwi CAL." />
               </div>
               <div>
-                <img src={c4} alt="" />
+                <img
+                  src={c4}
+                  alt="Uział w warsztatach montażowych produktów marki Classen."
+                />
               </div>
               <div>
-                <img src={c5} alt="" />
+                <img src={c5} alt="Oferta drzwi stalowych formy Wikęd." />
               </div>
               <div>
-                <img src={c6} alt="" />
+                <img
+                  src={c6}
+                  alt="Szkolenie informatyczne dot. programu do konstrucki i kalkulacji okien WH OKNA."
+                />
               </div>
               <div>
-                <img src={c7} alt="" />
+                <img src={c7} alt="Certyfikat firmy godnej zaufania." />
               </div>
               <div>
-                <img src={c8} alt="" />
+                <img
+                  src={c8}
+                  alt="Certyfikat potwierdzający autoryzację firmy Bramgaz w montażu i serwisie bram garażowych, przemysłowych, napędów i sterowań do drzwi."
+                />
               </div>
               <div>
-                <img src={c9} alt="" />
+                <img
+                  src={c9}
+                  alt="Zwycięstwo w konkursie sprzedażowym Zakłądu Stolarki Budowlanej CAL."
+                />
               </div>
               <div>
-                <img src={c10} alt="" />
+                <img
+                  src={c10}
+                  alt="Zaawansowane szkolenie techniczne z zakresu programowania i instalowania produktów HOLDINGU BENINCA."
+                />
               </div>
               <div>
-                <img src={c11} alt="" />
+                <img
+                  src={c11}
+                  alt="Technika montażu, obsługi klienta, prawa konsumenckiego i marketingu."
+                />
               </div>
             </Slider>
           </div>
