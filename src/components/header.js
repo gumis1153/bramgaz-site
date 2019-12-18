@@ -3,6 +3,7 @@ import { StaticQuery, graphql } from "gatsby"
 import "../styles/header.css"
 import "../components/layout.css"
 import { Link } from "react-scroll"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 class Header extends Component {
   state = {
@@ -56,34 +57,37 @@ class Header extends Component {
           <nav className={this.state.mobileMenuOpen ? "active" : ""}>
             <ul>
               <li>
-                <a href="#start" onClick={this.handleMobileMenu}>
+                <OutboundLink href="#start" onClick={this.handleMobileMenu}>
                   Start
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a href="#about" onClick={this.handleMobileMenu}>
+                <OutboundLink href="#about" onClick={this.handleMobileMenu}>
                   O nas
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a href="#offer" onClick={this.handleMobileMenu}>
+                <OutboundLink href="#offer" onClick={this.handleMobileMenu}>
                   Oferta
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a href="#gallery" onClick={this.handleMobileMenu}>
+                <OutboundLink href="#gallery" onClick={this.handleMobileMenu}>
                   Realizacje
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a href="#certifications" onClick={this.handleMobileMenu}>
+                <OutboundLink
+                  href="#certifications"
+                  onClick={this.handleMobileMenu}
+                >
                   Certyfikaty
-                </a>
+                </OutboundLink>
               </li>
               <li>
-                <a href="#contact" onClick={this.handleMobileMenu}>
+                <OutboundLink href="#contact" onClick={this.handleMobileMenu}>
                   Kontakt
-                </a>
+                </OutboundLink>
               </li>
             </ul>
           </nav>

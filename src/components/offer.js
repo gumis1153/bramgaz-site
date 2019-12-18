@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import Slider from "react-slick"
+import { OutboundLink } from "gatsby-plugin-google-analytics"
 
 import "slick-carousel/slick/slick.css"
 import "slick-carousel/slick/slick-theme.css"
@@ -115,211 +116,211 @@ class Offer extends Component {
             <div className="deliversSlider">
               <Slider {...settings}>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.aluplast.com.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo1} alt="Logo firmy Aluplast" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://asilo.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo2} alt="Logo firmy Asilo" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://beninca.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo3} alt="Logo firmy Beninca" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://classen.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo4} alt="Logo firmy Classen" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="http://dierre.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo5} alt="Logo firmy Dierre" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.gealan.de/pl/gealan-fenster-systeme-gmbh"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo6} alt="Logo firmy Gealan" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="http://himotions.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo7} alt="Logo firmy Hi Motions" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.hormann.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo8} alt="Logo firmy Hormann" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://krispol.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo9} alt="Logo firmy Krispol" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.loading-systems.com/pl-pl"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo10} alt="Logo firmy Loading System" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="http://www.bigtor.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo11} alt="Logo firmy Big Tor" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.drzwi-cal.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo12} alt="Logo firmy Cal" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="http://www.polfendo.com/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo13} alt="Logo firmy Polfendo" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.marantec.com/pl/strona-startowa.html"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo14} alt="Logo firmy Marantec" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.metalpol.com.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo15} alt="Logo firmy Metalpol Furmaniak" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="http://www.siatki-ogrodzeniowe.net/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo16} alt="Logo firmy Ogromet" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.porta.com.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo17} alt="Logo firmy Porta" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.rehau.com/pl-pl"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo18} alt="Logo firmy Rehau" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://robelit.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo19} alt="Logo firmy Robelit" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://roothkin.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo20} alt="Logo firmy Roothkin" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://wiked.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo21} alt="Logo firmy Wikęd" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.winkhaus.com/pl-pl"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo22} alt="Logo firmy Wink Haus" />
-                  </a>
+                  </OutboundLink>
                 </div>
                 <div>
-                  <a
+                  <OutboundLink
                     href="https://www.wisniowski.pl/"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     <img src={logo23} alt="Logo firmy Wiśniowski" />
-                  </a>
+                  </OutboundLink>
                 </div>
               </Slider>
             </div>
