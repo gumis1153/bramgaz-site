@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: `/test`,
+  pathPrefix: `/`,
   siteMetadata: {
     title: `Bramgaz | Leszno - Bramy. Drzwi. Napędy. Okna`,
     description: `Bramy, drzwi, napędy, okna. ul. Chociszewskiego 37a, 64-100 Leszno`,
