@@ -34,6 +34,7 @@ class Realizations extends Component {
               src: `${i.photo.url}`,
               width: `${i.photo.width}`,
               height: `${i.photo.height}`,
+              alt: `${i.description}`,
             })
             photos = arr
           })

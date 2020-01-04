@@ -1,11 +1,17 @@
 import React from "react"
 import "../styles/footer.css"
 
+const year = () => {
+  const date = new Date()
+  const year = date.getFullYear()
+  return year
+}
+
 const Footer = () => {
   return (
     <>
       <footer>
-        <p>2019 | Designed and developed by: piotrjakubowski.pl</p>
+        <p>{year()} | Designed and developed by: piotrjakubowski.pl</p>
       </footer>
     </>
   )
